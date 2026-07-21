@@ -7,22 +7,28 @@
 
 Feed the output file to your favorite LLM and let it understand your entire project architecture in one go.
 
-## One-Line Installation
+## Installation
 
-Just run this in your terminal. It downloads the script, puts it in `~/.local/bin`, detects if you're running `bash` or `zsh`, and adds the alias for you.
+`llmdump` is a zero-dependency, plug-and-play tool. Choose your operating system below to install or run the script in a single command.
+
+### 🐧 Linux & 🍎 macOS (One-Line Install)
+
+Just run this command in your terminal. It downloads the script, places it securely in `~/.local/bin`, automatically detects whether you are running `bash` or `zsh`, and configures the `llmdump` alias for you.
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/Matin-B/llmdump/main/install.sh | bash
 
 ```
 
-*(Don't forget to run `source ~/.bashrc` or `source ~/.zshrc` after installing, or just restart your terminal).*
+*(Note: Don't forget to run `source ~/.bashrc` or `source ~/.zshrc` after installing, or simply restart your terminal session so the alias takes effect).*
 
-## How to Use
+### 🪟 Windows (One-Line Run)
 
-Run the command and provide your project's absolute path:
-```bash
-llmdump
+Windows users don't need to manually download or configure paths. Just open **PowerShell** and paste this one-liner to fetch and execute it directly in memory:
+
+```powershell
+iex (irm "https://raw.githubusercontent.com/Matin-B/llmdump/main/llmdump.ps1")
+
 ```
 
 ## 🪄 The Recommended AI Prompt

@@ -2,7 +2,7 @@
 
 # ==============================================================================
 # LLM Project Context Generator
-# Dumps allowed files from a directory into Markdown and XML formats.
+# GitHub: https://github.com/Matin-B/llmdump
 # ==============================================================================
 
 # ANSI Color Codes
