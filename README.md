@@ -25,6 +25,30 @@ Run the command and provide your project's absolute path:
 llmdump
 ```
 
+## 🪄 The Recommended AI Prompt
+
+Once you have your `codebase_dump.md` or `codebase_dump.xml` file, **upload it** to ChatGPT, Claude, or Gemini.
+
+To prevent the AI from hallucinating or generating unsolicited code, use this battle-tested prompt alongside your file upload. It forces the LLM to index your project and wait for your commands:
+
+```text
+Act as an Expert Software Architect and Senior Developer. I have attached the complete codebase of my project as a single dump file (structured with Markdown headings or XML tags).
+
+### INSTRUCTIONS FOR INGESTION:
+1. READ AND INDEX: Carefully analyze the entire attached codebase. Build an internal mental map of all files, directories, classes, functions, and their interdependencies (e.g., how core modules communicate, overall data flow, and any external integrations).
+2. STRICT PASSIVITY: Do NOT rewrite, refactor, critique, or generate any new code in your initial response. Your only task right now is to load the context into your memory.
+3. PREPARE FOR DEEP ANALYSIS: In our subsequent conversation, I will ask highly technical, line-by-line questions, request the extraction of specific logic to build independent modules, or ask for refactoring. You must strictly base your answers on the provided codebase.
+4. NO HALLUCINATION: If I ask about a module, library, or variable not present in this text dump, you must explicitly state that it is missing from the provided context rather than inventing an answer.
+
+### YOUR RESPONSE FORMAT:
+To confirm you have successfully ingested and understood the project, reply ONLY with:
+1. A brief, high-level directory/file tree structure based on what you see in the dump.
+2. A technical 2-3 sentence summary of the project's primary architecture and data flow.
+3. The exact phrase: "Codebase fully ingested and indexed. I am ready for line-by-line analysis, logic extraction, or deep-dive technical questions. What file, module, or specific logic should we investigate first?"
+
+```
+
+
 ## What it ignores by default
 
 You don't want to feed compiled binaries or massive cache folders to an LLM. By default, `llmdump` skips:
