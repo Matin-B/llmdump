@@ -1,6 +1,6 @@
 # LLMDump 🧠
 
-`llmdump` is a dead-simple bash script that crawls your project directory, grabs all the important text/code files (ignoring the garbage like `.git`, `node_modules`, and `__pycache__`), and dumps them into two beautifully formatted files simultaneously:
+`llmdump` is a simple bash script that crawls your project directory, grabs all the important text/code files (ignoring the garbage like `.git`, `node_modules`, and `__pycache__`), and dumps them into two beautifully formatted files simultaneously:
 
 1. **`codebase_dump.md`**: A Markdown version heavily optimized for **ChatGPT** and **Gemini**.
 2. **`codebase_dump.xml`**: An XML version using `<document>` and `CDATA` tags, strictly optimized for **Claude 3**'s attention mechanism.
